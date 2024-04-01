@@ -5,6 +5,7 @@ import { StyleSheet, Text, View, SafeAreaView, Image, Platform,
   TouchableOpacity, TouchableHighlight } from 'react-native';
 import { Button } from 'react-native-web';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Overview from "./app/screens/Overview";
 
 
 export default function App() {
@@ -22,11 +23,12 @@ export default function App() {
   console.log("Hello World");
   return (
     <SafeAreaView style={styles.container} >
+      <Overview />
       <Button title="Click Me" onPress={() => alert("Are you sure?")}/>
       <Text>Hello Kat! This is lorem a really long thing that is also really long and this is also super super long</Text>
       <StatusBar style="auto" />
       {myArray}
-      <Image source={require("./assets/icon.png")} style={styles.Image}/>
+      <Image source={require("./app/assets/icon.png")} style={styles.Image}/>
       <TouchableHighlight onPress={() => console.log("image touched")}>
         <Image source={{ uri: "https://picsum.photos/200/300", width: 200, height: 300}}  />
       </TouchableHighlight>

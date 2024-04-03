@@ -25,6 +25,10 @@ export default function App() {
     <SafeAreaView style={styles.container} >
       <Overview />
       <Button title="Click Me" onPress={() => alert("Are you sure?")}/>
+      <NavigationContainer>
+        <Button title="overview page"
+        onPress={() => navigator.nav}/>
+      </NavigationContainer>
       <Text>Hello Kat! This is lorem a really long thing that is also really long and this is also super super long</Text>
       <StatusBar style="auto" />
       {myArray}
